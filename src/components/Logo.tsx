@@ -1,20 +1,17 @@
 type LogoProps = {
-  outerSize?: string
-  innerSize?: string
+  size?: number
   className?: string
 }
 
-export default function Logo({
-  outerSize = 'w-7 h-7',
-  innerSize = 'w-3 h-3',
-  className = '',
-}: LogoProps) {
+export default function Logo({ size = 40, className = '' }: LogoProps) {
   return (
-    <div
-      className={`${outerSize} rounded-full border-2 border-foreground/60 flex items-center justify-center ${className}`}
-      aria-hidden="true"
-    >
-      <div className={`${innerSize} rounded-full border border-foreground/60`} />
-    </div>
+    <img
+      src="/logo.svg"
+      alt="Miny Labs"
+      width={size}
+      height={Math.round((size * 115) / 123)}
+      className={className}
+      style={{ display: 'block' }}
+    />
   )
 }

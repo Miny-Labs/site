@@ -1,73 +1,47 @@
-# React + TypeScript + Vite
+# Miny Labs — Portfolio Site
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A small lab building bleeding-edge experiments at the intersection of cryptography and autonomous agents — across every chain that matters.
 
-Currently, two official plugins are available:
+This repo is the public-facing landing site for [miny-labs](https://github.com/Miny-Labs).
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Stack
 
-## React Compiler
+- **Vite + React 19 + TypeScript**
+- **Tailwind CSS** with HSL-token design system
+- **framer-motion** for animations and scroll-driven reveals
+- **hls.js** for the streaming background video in the CTA section
+- **Inter** + **Instrument Serif** via `@fontsource`
+- **lucide-react** for iconography (with inline SVGs for brand and chain glyphs)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Sections
 
-## Expanding the ESLint configuration
+1. **Hero** — chain logo strip, headline, dual CTAs (Get in touch / Explore the lab)
+2. **Crypto has evolved** — three paradigms we build for: zero-knowledge, autonomous agents, multi-chain
+3. **Mission** — scroll-driven word-by-word reveal over a looping ambient video
+4. **The lab for meaningful crypto and AI primitives** — four service columns
+5. **Start your experiment** — HLS-streamed CTA section with mailto + GitHub
+6. **Footer**
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Local development
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm install
+npm run dev      # → http://localhost:5173
+npm run build    # production bundle in /dist
+npm run preview  # preview the built bundle
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Deployment
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Deployed to Vercel via the Vercel CLI:
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+vercel        # link + preview
+vercel --prod # production deploy
 ```
+
+The site is static — no backend, no environment variables required.
+
+## Contact
+
+[akash@miny-labs.com](mailto:akash@miny-labs.com)

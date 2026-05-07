@@ -56,7 +56,7 @@ export default function CTA() {
 
       <div className="relative z-10 max-w-3xl mx-auto flex flex-col items-center text-center">
         <motion.div {...fadeUp(0)}>
-          <Logo outerSize="w-10 h-10" innerSize="w-5 h-5" />
+          <Logo size={64} />
         </motion.div>
 
         <motion.h2
