@@ -95,7 +95,7 @@ export default function Hero() {
           }}
         >
           A small lab building bleeding-edge experiments at the intersection of
-          cryptography and autonomous agents — across every chain that matters.
+          blockchain and autonomous agents — across every chain that matters.
         </motion.p>
 
         <motion.div
