@@ -1,21 +1,51 @@
-@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap');
+@import '@fontsource/inter/400.css';
+@import '@fontsource/inter/500.css';
+@import '@fontsource/inter/600.css';
+@import '@fontsource/inter/700.css';
+@import '@fontsource/instrument-serif/400.css';
+@import '@fontsource/instrument-serif/400-italic.css';
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
+  :root {
+    --background: 0 0% 0%;
+    --foreground: 0 0% 100%;
+    --card: 0 0% 5%;
+    --card-foreground: 0 0% 100%;
+    --primary: 0 0% 100%;
+    --primary-foreground: 0 0% 0%;
+    --secondary: 0 0% 12%;
+    --secondary-foreground: 0 0% 85%;
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 65%;
+    --accent: 170 15% 45%;
+    --accent-foreground: 0 0% 100%;
+    --border: 0 0% 20%;
+    --input: 0 0% 18%;
+    --ring: 0 0% 40%;
+    --hero-subtitle: 210 17% 95%;
+    --radius: 0.75rem;
+  }
+
+  * {
+    border-color: hsl(var(--border));
+  }
+
   html,
   body,
   #root {
-    background: #000;
-    color: #fff;
+    background: hsl(var(--background));
+    color: hsl(var(--foreground));
     min-height: 100vh;
   }
 
   body {
     margin: 0;
-    font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
@@ -23,7 +53,7 @@
 
   ::selection {
     background: rgba(255, 255, 255, 0.15);
-    color: #fff;
+    color: hsl(var(--foreground));
   }
 }
 
@@ -62,14 +92,7 @@
     pointer-events: none;
   }
 
-  .font-serif-italic {
+  .font-serif {
     font-family: 'Instrument Serif', serif;
-    font-style: italic;
-    font-weight: 400;
-  }
-
-  .font-serif-display {
-    font-family: 'Instrument Serif', serif;
-    font-weight: 400;
   }
 }

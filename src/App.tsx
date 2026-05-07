@@ -1,20 +1,22 @@
+import Navbar from './components/Navbar'
 import Hero from './components/Hero'
-import AboutSection from './components/AboutSection'
-import FeaturedVideoSection from './components/FeaturedVideoSection'
-import PhilosophySection from './components/PhilosophySection'
-import ServicesSection from './components/ServicesSection'
+import SearchChanged from './components/SearchChanged'
+import Mission from './components/Mission'
+import Solution from './components/Solution'
+import CTA from './components/CTA'
 import Footer from './components/Footer'
 
 function App() {
   return (
-    <main className="bg-black min-h-screen text-white antialiased">
+    <div className="bg-background text-foreground min-h-screen antialiased">
+      <Navbar />
       <Hero />
-      <AboutSection />
-      <FeaturedVideoSection />
-      <PhilosophySection />
-      <ServicesSection />
+      <SearchChanged />
+      <Mission />
+      <Solution />
+      <CTA />
       <Footer />
-    </main>
+    </div>
   )
 }
 
