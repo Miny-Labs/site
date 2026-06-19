@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
+import { Globe } from 'lucide-react'
 import Logo from './Logo'
-import { GithubIcon, XIcon, LinkedinIcon } from './BrandIcons'
+import { GithubIcon, LinkedinIcon } from './BrandIcons'
 
 const NAV_LINKS = [
   { label: 'Home', href: '#home' },
@@ -16,12 +17,12 @@ const SOCIALS = [
     Icon: GithubIcon,
   },
   {
-    href: 'https://x.com/akshmnd',
-    label: 'X',
-    Icon: XIcon,
+    href: 'https://hitakshii.lovable.app',
+    label: 'Portfolio',
+    Icon: Globe,
   },
   {
-    href: 'https://www.linkedin.com/in/akshmnd/',
+    href: 'https://www.linkedin.com/in/hitakshiaroraa/',
     label: 'LinkedIn',
     Icon: LinkedinIcon,
   },
